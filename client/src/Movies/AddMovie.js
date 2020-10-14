@@ -6,6 +6,7 @@ const startState = {
   title: "",
   director: "",
   metascore: "",
+  stars: [],
 };
 
 function UpdateForm() {
@@ -20,10 +21,10 @@ function UpdateForm() {
   const submit = (e) => {
     e.preventDefault();
     axios
-      .post(`http://localhost:5000/api/movies/${id}`, input)
+      .post(`http://localhost:5000/api/movies`, input)
       .then((res) => {
         setInput(res.data);
-        push(`/movies/${id}`);
+        push(`/`);
       })
       .catch((err) => console.log(err));
   };
@@ -44,7 +45,7 @@ function UpdateForm() {
           onChange={change}
           type="text"
         />
-        <button>UPDATE</button>
+        <button>ADD</button>
       </form>
     </div>
   );
