@@ -17,19 +17,10 @@ function UpdateForm() {
     setInput({ ...input, [e.target.name]: e.target.value });
   };
 
-  useEffect(() => {
-    axios
-      .get(`http://localhost:5000/api/movies/${id}`)
-      .then((res) => {
-        setInput(res.data);
-      })
-      .catch((err) => console.log(err));
-  }, [id]);
-
   const submit = (e) => {
     e.preventDefault();
     axios
-      .put(`http://localhost:5000/api/movies/${id}`, input)
+      .post(`http://localhost:5000/api/movies/${id}`, input)
       .then((res) => {
         setInput(res.data);
         push(`/movies/${id}`);
