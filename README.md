@@ -1,8 +1,10 @@
 # HTTP Movies
 
+h
+
 ## Instructions
 
-### Task 1: Project Setup 
+### Task 1: Project Setup
 
 - **Fork** this repository, then clone your fork.
 - Run `npm install` to download dependencies.
@@ -65,4 +67,5 @@ Movie object format:
 - Style the app!
 
 ## Submission Format
-* [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
+
+- [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's Repo). **Please don't merge your own pull request**
